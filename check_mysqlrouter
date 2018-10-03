@@ -1,0 +1,28 @@
+#!/bin/bash
+
+case "$1" in
+start)
+   python /var/check_mysqlrouter/app.py 80 &
+   echo $!>/var/run/check_mysqlrouter.pid
+   ;;
+stop)
+   kill `cat /var/run/check_mysqlrouter.pid`
+   rm /var/run/check_mysqlrouter.pid
+   ;;
+restart)
+   $0 stop
+   $0 start
+   ;;
+status)
+   if [ -e /var/run/check_mysqlrouter.pid ]; then
+      echo check_mysqlrouter is running, pid=`cat /var/run/check_mysqlrouter.pid`
+   else
+      echo check_mysqlrouter is NOT running
+      exit 1
+   fi
+   ;;
+*)
+   echo "Usage: $0 {start|stop|status|restart}"
+esac
+
+exit 0

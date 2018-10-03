@@ -2,6 +2,6 @@
 
 pip install web.py
 
-cp mysqlrouter_check /etc/init.d/ && chmod 0755 /etc/init.d/mysqlrouter_check
+cp check_mysqlrouter /etc/init.d/ && chmod 0755 /etc/init.d/check_mysqlrouter
 
-service mysqlrouter_check start
+service check_mysqlrouter start
