@@ -2,7 +2,7 @@
 
 case "$1" in
 start)
-   nohup python /var/check_mysqlrouter/app.py 80 &
+   nohup python /var/check_mysqlrouter/app.py 80 &>/dev/null &
    echo $!>/var/run/check_mysqlrouter.pid
    ;;
 stop)
