@@ -8,7 +8,6 @@ status=`/bin/systemctl status mysqlrouter.service`
  elif [[ ($status =~ "inactive") && ($http_pid != "") ]]; then
    http_pid=`ps -ef |grep SimpleHTTPServer |grep 80 |awk '{print $2}'`
    kill -9 "$http_pid"
-   echo "killing pid"
  fi
 
 sleep 10;
