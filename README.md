@@ -1,5 +1,5 @@
 # check_mysqlrouter
-A super simple web app to report the status of mysql-router service over port 80
+A super simple web app to report the status of mysqlrouter service over port 80
 
 ## Requirements
 
