@@ -11,5 +11,5 @@ status=`/bin/systemctl status mysqlrouter.service |grep running`
    echo "killing pid"
  fi
 
-sleep 5;
+sleep 10;
 done
