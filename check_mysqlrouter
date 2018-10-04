@@ -2,7 +2,7 @@
 
 case "$1" in
 start)
-   nohup sh /var/check_mysqlrouter/watcher.sh 80 &>/dev/null &
+   cd var/check_mysqlrouter && nohup sh watcher.sh 80 &>/dev/null &
    echo $!>/var/run/check_mysqlrouter.pid
    ;;
 stop)
