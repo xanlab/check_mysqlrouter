@@ -6,4 +6,4 @@ A super simple web app to report the status of mysql-router service over port 80
 pip
 
 ## Usage
-Clone this repo in ```bash /var ``` and run ```bash sh setup.sh ```
+Clone this repo in ``` /var ``` and run ``` sh setup.sh ```
